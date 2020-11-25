@@ -15,8 +15,8 @@ jobs:
           token: ${{ secrets.PERSONAL_TOKEN_GITBOOK_ACTION }}
           source_dir: .
           gitbook_pdf: true
-          gitbook_pdf_name: _____________
+          gitbook_pdf_name: <nombre-del-libro-sin-extension>
           gitbook_epub: true
-          gitbook_epub_name: _____________
+          gitbook_epub_name: <nombre-del-libro-sin-extension>
           gitbook_mobi: true
-          gitbook_mobi_name: _____________
+          gitbook_mobi_name: <nombre-del-libro-sin-extension>

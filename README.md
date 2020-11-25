@@ -1,6 +1,6 @@
 # Instrucciones para publicar un libro con gitbook
 
-Haz fork de este repo
+Haz fork de este repo, ubicando la copia en la organización CATEDU.
 
 # Editando FOOTER
 
@@ -27,5 +27,15 @@ En el `FOOTER.md` concretamente las etiquetas `{{ book.title }}` y `{{ book.auth
 
 ## Integración contínua
 
-En el archivo `.github/workflows/gitbook-action.yml`, da nombre al libro que quieres que se genere.
+En el archivo `.github/workflows/gitbook-action.yml`, da nombre al libro que quieres que se genere **sin especificar la extensión**.
 
+```yml
+  ...
+    source_dir: .
+    gitbook_pdf: true
+    gitbook_pdf_name: <nombre-del-libro-sin-extension>
+    gitbook_epub: true
+    gitbook_epub_name: <nombre-del-libro-sin-extension>
+    gitbook_mobi: true
+    gitbook_mobi_name: <nombre-del-libro-sin-extension>
+```
