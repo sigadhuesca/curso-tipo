@@ -2,7 +2,11 @@
 
 Haz fork de este repo, ubicando la copia en la organización CATEDU.
 
-# Editando FOOTER
+## Añadiendo archivos
+
+Crea una carpeta por cada capítulo y guarda en ellas los archivos .md que crees. Para que se generen debes enlazarlos en el archivo `SUMMARY.md`.
+
+## Editando FOOTER
 
 Para cambiar los datos del footer hay que tocar dos archivos: `book.json` y `FOOTER.md`.
 
