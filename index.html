@@ -213,9 +213,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="instrucciones-para-publicar-un-libro-con-gitbook">Instrucciones para publicar un libro con gitbook</h1>
-<p>Haz fork de este repo, ubicando la copia en la organizaci&#xF3;n CATEDU.</p>
+<p><strong>Si est&#xE1;s actualmente</strong> en la url <a href="https://github.com/catedu/curso-tipo/" target="_blank">https://github.com/catedu/curso-tipo/</a> clica en el bot&#xF3;n verde arriba a la derecha &quot;Use this template&quot; y sigue los siguientes pasos. Si no creas este repositorio bajo el usuario <code>catedu</code> deber&#xE1;s <a href="https://docs.github.com/en/actions/reference/encrypted-secrets" target="_blank">a&#xF1;adir un <code>PERSONAL_TOKEN_GITBOOK_ACTION</code></a> para que la integraci&#xF3;n cont&#xED;nua funcione.</p>
+<p><strong>Si est&#xE1;s ya en el repo</strong> pasa al siguiente apartado.</p>
 <h2 id="a&#xF1;adiendo-archivos">A&#xF1;adiendo archivos</h2>
-<p>Crea una carpeta por cada cap&#xED;tulo y guarda en ellas los archivos .md que crees. Para que se generen debes enlazarlos en el archivo <code>SUMMARY.md</code>.</p>
+<p>Crea una carpeta por cada cap&#xED;tulo y guarda en ellas los archivos .md que crees. Para que se generen debes enlazarlos en el archivo <code>SUMMARY.md</code>. Puedes seguir el ejemplo prepoblado que ya viene con este repo.</p>
 <h2 id="editando-footer">Editando FOOTER</h2>
 <p>Para cambiar los datos del footer hay que tocar dos archivos: <code>book.json</code> y <code>FOOTER.md</code>.</p>
 <pre><code class="lang-js"><span class="hljs-comment">// book.json</span>
@@ -233,7 +234,7 @@
     ]
   },
 </code></pre>
-<p>En el <code>FOOTER.md</code> concretamente las etiquetas <code>{{ book.title }}</code> y <code>{{ book.authors[0] }}</code>.</p>
+<p>En el <code>FOOTER.md</code> concretamente las etiquetas s&#xF3;lo habr&#xED;a que tocar <code>{{ book.authors[0] }}</code> si tuvi&#xE9;ramos m&#xE1;s de un autor.</p>
 <h2 id="integraci&#xF3;n-cont&#xED;nua">Integraci&#xF3;n cont&#xED;nua</h2>
 <p>En el archivo <code>.github/workflows/gitbook-action.yml</code>, da nombre al libro que quieres que se genere <strong>sin especificar la extensi&#xF3;n</strong>.</p>
 <pre><code class="lang-yml">  ...
@@ -245,6 +246,16 @@
 </span><span class="hljs-attr">    gitbook_mobi:</span> <span class="hljs-literal">true</span>
 <span class="hljs-attr">    gitbook_mobi_name:</span> &lt;nombre-del-libro-sin-extension<span class="hljs-string">&gt;
 </span></code></pre>
+<h3 id="&#xA1;y-ya-est&#xE1;s-listo-para-publicar-&#x1F4E3;-&#x1F4E1;">&#xA1;Y ya est&#xE1;s listo para publicar! &#x1F4E3; &#x1F4E1;</h3>
+<p>Cada vez que hagas push a la rama <code>master</code> volver&#xE1; a generar los archivos est&#xE1;ticos en la rama gh-pages, quedando la versi&#xF3;n web actualizada del libro publicada en la url https://<nombre-de-la-cuenta>.io/<nombre-del-repo> y las versiones en formato epub, pdf y mobi en las url <a href="https://github.com/" target="_blank">https://github.com/</a><nombre-de-la-cuenta>/<nombre-del-repo>/raw/gh-pages/mybook/<nombre-del-libro-sin-extension>.<formato></formato></nombre-del-libro-sin-extension></nombre-del-repo></nombre-de-la-cuenta></nombre-del-repo></nombre-de-la-cuenta></p>
+<p>Por ejemplo, esta plantilla est&#xE1; disponible en formato web en <a href="https://catedu.github.io/curso-tipo/" target="_blank">https://catedu.github.io/curso-tipo/</a> y las versiones descargable quedan publicadas en las siguientes urls:</p>
+<ul>
+<li><a href="https://github.com/catedu/curso-tipo/raw/gh-pages/mybook/curso-tipo.epub" target="_blank">https://github.com/catedu/curso-tipo/raw/gh-pages/mybook/curso-tipo.epub</a></li>
+<li><a href="https://github.com/catedu/curso-tipo/raw/gh-pages/mybook/curso-tipo.mobi" target="_blank">https://github.com/catedu/curso-tipo/raw/gh-pages/mybook/curso-tipo.mobi</a></li>
+<li><a href="https://github.com/catedu/curso-tipo/raw/gh-pages/mybook/curso-tipo.pdf" target="_blank">https://github.com/catedu/curso-tipo/raw/gh-pages/mybook/curso-tipo.pdf</a></li>
+</ul>
+<h2 id="&#xA1;atenci&#xF3;n">&#xA1;Atenci&#xF3;n!</h2>
+<p>La generaci&#xF3;n de la versi&#xF3;n actualizada tras cada push puede tardar hasta 15 minutos.</p>
 <p><div id="page-footer" class="localized-footer"><hr><p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">__________</span> por <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">_____________</span> bajo licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional License</a>.</p>
 </div></p>
 
@@ -286,7 +297,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Introudcción 1","level":"1.2","depth":1,"path":"capitulo-uno/README.md","ref":"capitulo-uno/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","accordion","styled-blockquotes","localized-footer","edit-link","githubcontributors","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"accordion":{},"search":{},"styled-blockquotes":{},"localized-footer":{"filename":"./FOOTER.md","hline":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-135691041-2"},"githubcontributors":{"contributorWidth":"300px","githubOwner":"catedu","githubRepository":"<nombre-del-repo>"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edita esta página","base":"https://github.com/catedu/<nombre-del-repo>/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"title":"__________","authors":["_____________","________________"],"collaborators":[{"name":"_________","edited":"_____________"}]},"language":"es","gitbook":"*"},"file":{"path":"README.md","mtime":"2020-11-25T11:34:41.936Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-25T11:35:16.987Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Introudcción 1","level":"1.2","depth":1,"path":"capitulo-uno/README.md","ref":"capitulo-uno/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","accordion","styled-blockquotes","localized-footer","edit-link","githubcontributors","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"accordion":{},"search":{},"styled-blockquotes":{},"localized-footer":{"filename":"./FOOTER.md","hline":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-135691041-2"},"githubcontributors":{"contributorWidth":"300px","githubOwner":"catedu","githubRepository":"<nombre-del-repo>"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edita esta página","base":"https://github.com/catedu/<nombre-del-repo>/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"title":"__________","authors":["_____________","________________"],"collaborators":[{"name":"_________","edited":"_____________"}]},"language":"es","gitbook":"*"},"file":{"path":"README.md","mtime":"2021-03-10T09:34:45.552Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-10T09:35:22.835Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
