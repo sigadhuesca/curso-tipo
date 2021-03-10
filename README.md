@@ -6,7 +6,7 @@
 
 ## Añadiendo archivos
 
-Crea una carpeta por cada capítulo y guarda en ellas los archivos .md que crees. Para que se generen debes enlazarlos en el archivo `SUMMARY.md`. Puedes seguir el ejemplo prepoblado que ya viene con este repo.
+Crea una carpeta por cada capítulo y guarda en ellas los archivos .md que crees. [Aquí](https://markdown.es/sintaxis-markdown/) tienes una guía del formato Markdown. Para que se generen debes enlazarlos en el archivo `SUMMARY.md`. Puedes seguir el ejemplo prepoblado que ya viene con este repo.
 
 ## Editando FOOTER
 
