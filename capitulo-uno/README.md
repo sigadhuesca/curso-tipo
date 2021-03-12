@@ -3,13 +3,13 @@
 También podemos introducir algunas cajas de texto resaltado.
 
 >**tip**
->Esto es una caja de texto resaltado.
+>Esto es una caja de texto resaltado.  
 
 >**danger**
->Otra
+>Otra  
 
 >**info**
->Otra
+>Otra  
 
 >**success**
 >Y el último tipo
